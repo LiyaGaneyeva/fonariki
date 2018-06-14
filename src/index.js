@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { injectGlobal } from 'styled-components';
-import App from './components/App';
+import AppContainer from './containers/AppContainer';
 import store from './store';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -16,7 +16,7 @@ injectGlobal`
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <AppContainer />
   </Provider>,
   document.getElementById('root'),
 );
