@@ -1,30 +1,28 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
-import Question from '../components/Question';
+import QuestionContainer from '../containers/QuestionContainer';
 import QuestionCount from '../components/QuestionCount';
-import AnswerOption from '../components/AnswerOption';
 import { QUESTION_TOTAL } from '../constants';
 
-const QuizScreen = ({ questionId, answerOptions, question, goToNextStage }) => (
+const QuizScreen = ({ questionIndex, goToNextStage, goToNextQuestion }) => (
   <Fragment>
     <div className="quiz">
-      <QuestionCount counter={questionId} total={QUESTION_TOTAL} />
-      <Question content={question} />
-      <ul className="answerOptions">
-        {answerOptions.map(answer => (
-          <AnswerOption key={answer.id} answer={answer.content} questionId={questionId} />
-        ))}
-      </ul>
+      <QuestionCount counter={questionIndex + 1} total={QUESTION_TOTAL} />
+      <QuestionContainer />
     </div>
-    <Button onClick={goToNextStage}>Далее</Button>
+    {questionIndex + 1 < QUESTION_TOTAL ? (
+      <Button onClick={goToNextQuestion}>Далее</Button>
+    ) : (
+      <Button onClick={goToNextStage}>Завершить</Button>
+    )}
   </Fragment>
 );
 
 QuizScreen.propTypes = {
+  questionIndex: PropTypes.number.isRequired,
   goToNextStage: PropTypes.func.isRequired,
-  timeout: PropTypes.number.isRequired,
-  digits: PropTypes.arrayOf(PropTypes.number).isRequired,
+  goToNextQuestion: PropTypes.func.isRequired,
 };
 
 export default QuizScreen;

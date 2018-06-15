@@ -11,13 +11,13 @@ const Wrapper = styled.div`
 
 const App = ({ stage }) => (
     <Wrapper>
-        {stage === 0 && (
+        {stage === 1 && (
             <StartScreenContainer />
         )}
-        {stage === 1 && (
+        {stage === 2 && (
             <QuizScreenContainer />
         )}
-        {stage === 2 && (
+        {stage === 3 && (
             <VerificationScreenContainer />
         )}
     </Wrapper>

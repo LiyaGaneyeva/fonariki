@@ -1,15 +1,17 @@
 import React from 'react';
 
-const AnswerOption = ({ answer }) => (
+const AnswerOption = ({ text, value, handleSelectAnswerOption }) => (
   <li className="answerOption">
     <input
       type="radio"
       className="radioCustomButton"
       name="radioGroup"
-      id={answer.id}
-      value={answer.content}
+      value={value}
+      onChange={handleSelectAnswerOption}
     />
-    <label className="radioCustomLabel">{answer.content}</label>
+    <label className="radioCustomLabel">
+      {text}
+    </label>
   </li>
 );
 
