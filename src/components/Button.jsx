@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-  background-color: ${({ disabled }) => (disabled ? '#aaa' : '#007bff')};
-  color: #fff;
-  border-radius: 0.25em;
-  padding: 0.7em 1em;
-  border: none;
-  font-size: 1em;
-  cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
+  width: 180px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+  text-decoration: none;
+  background: linear-gradient(180deg, #ffc642 0%, #cf820f 100%);
+  color: #ffffff;
+  cursor: pointer;
 `;
 
 export default Button;

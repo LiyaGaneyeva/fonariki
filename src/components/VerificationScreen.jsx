@@ -9,7 +9,7 @@ const VerificationScreen = ({ counter, reset }) => (
     {counter <= 5 && <h2>Ты рапунцель</h2>}
     {counter <= 10 && counter > 5 && <h2>Ты золушка</h2>}
     {counter > 10 && <h2>Ты снежная королева</h2>}
-    <Button onClick={reset}>Ок</Button>
+    <Button onClick={reset}>Пройти еще раз</Button>
   </Fragment>
 );
 

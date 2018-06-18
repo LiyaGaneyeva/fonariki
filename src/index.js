@@ -5,14 +5,7 @@ import { injectGlobal } from 'styled-components';
 import AppContainer from './containers/AppContainer';
 import store from './store';
 import registerServiceWorker from './registerServiceWorker';
-
-injectGlobal`
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-  }
-`;
+import './index.css'
 
 ReactDOM.render(
   <Provider store={store}>

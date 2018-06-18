@@ -6,7 +6,9 @@ import QuizScreenContainer from '../containers/QuizScreenContainer';
 import VerificationScreenContainer from '../containers/VerificationScreenContainer';
 
 const Wrapper = styled.div`
-  margin: 1em;
+  padding: 80px 1em 100px;
+  background-color: #ffffff;
+  color: #000000;
 `;
 
 const App = ({ stage }) => (
