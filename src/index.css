@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+header {
+    background-color: #000000;
+    padding: 11px;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.logo {
+    background-image: url('assets/logo.png');
+    width: 92px;
+    height: 64px;
+}
+
+.banner {
+    width: 100%;
+    height: calc(100vh - 86px);
+    background: linear-gradient(0deg, #333333, #333333), url('assets/bckg.png');
+    background-blend-mode: overlay, normal;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centered {
+    margin-left: 50%;
+}
+
+.main-header {
+    font-size: 64px;
+    margin: 0;
+}
+
+.button {
+    width: 180px;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.button-yellow {
+    background: linear-gradient(180deg, #ffc642 0%, #cf820f 100%);
+}
+
+.button-default {
+    border: 1px solid #ffc642;
+}
+
+.banner-buttons {
+    width: 100%;
+}
+
+section {
+    padding: 40px 0 80px;
+}
+
+.sec-header {
+    font-size: 48px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 300;
+
+}
+
+.sub-header-description {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.about-images {
+    margin-top: 40px;
+}
+
+.about-image {
+    background: linear-gradient(180deg, #ffc642 0%, #fd6302 100%);
+    border-radius: 8px;
+    width: 46%;
+    margin: 0 1%;
+    height: 415px;
+    display: inline-block;
+}
