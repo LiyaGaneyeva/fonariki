@@ -6,13 +6,13 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.4;
-    background-color: #000000;
+    background-color: #01070d;
     color: #ffffff;
 }
 
 header {
-    background-color: #000000;
-    padding: 11px;
+    background-color: #001019;
+    padding-top: 11px;
 }
 
 a {
@@ -40,8 +40,9 @@ a:focus {
 .banner {
     width: 100%;
     height: calc(100vh - 86px);
-    background: linear-gradient(0deg, #333333, #333333), url('assets/bckg.png');
+    background: linear-gradient(0deg, #333333, #333333), url('assets/bckg.jpg');
     background-blend-mode: overlay, normal;
+    background-size: cover;
     color: #ffffff;
     display: flex;
     align-items: center;
@@ -50,6 +51,7 @@ a:focus {
 
 .centered {
     margin-left: 50%;
+    margin-top: -150px;
 }
 
 .main-header {
@@ -94,7 +96,6 @@ section {
     text-align: center;
     line-height: 1.5;
     font-weight: 300;
-
 }
 
 .sub-header-description {
@@ -113,4 +114,38 @@ section {
     margin: 0 1%;
     height: 415px;
     display: inline-block;
+}
+
+.social-buttons {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social {
+    display: inline-block;
+    width: 150px;
+    height: 140px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 20px;
+}
+
+.instagram-link {
+    background-image: url('assets/instagram.png');
+}
+
+.facebook-link {
+    background-image: url('assets/facebook.png');
+}
+
+.twitter-link {
+    background-image: url('assets/twitter.png');
+}
+
+.vk-link {
+    background-image: url('assets/vk.png');
 }

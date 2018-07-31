@@ -7,6 +7,7 @@ import VerificationScreenContainer from '../containers/VerificationScreenContain
 
 const Wrapper = styled.div`
   padding: 80px 1em 100px;
+  height: 300px;
   background-color: #ffffff;
   color: #000000;
 `;
