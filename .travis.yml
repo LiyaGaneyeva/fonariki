@@ -1,0 +1,11 @@
+language: node_js
+sudo: false
+cache: yarn
+node_js: 9
+script: yarn build
+deploy: heroku
+  provider: heroku
+  app: light-flatstack
+  api_key: $HEROKU_AUTH_TOKEN
+  on:
+    branch: master
