@@ -13,17 +13,15 @@ const Wrapper = styled.div`
 `;
 
 const App = ({ stage }) => (
-    <Wrapper>
-        {stage === 1 && (
-            <StartScreenContainer />
-        )}
-        {stage === 2 && (
-            <QuizScreenContainer />
-        )}
-        {stage === 3 && (
-            <VerificationScreenContainer />
-        )}
-    </Wrapper>
+  <Wrapper>
+    {stage === 1 && <StartScreenContainer />}
+    {stage === 2 && <QuizScreenContainer />}
+    {stage === 3 && <VerificationScreenContainer />}
+  </Wrapper>
 );
+
+App.propTypes = {
+  stage: PropTypes.number.isRequired,
+};
 
 export default App;

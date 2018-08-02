@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
 import Button from './Button';
 
 const VerificationScreen = ({ counter, reset }) => (
@@ -13,6 +12,9 @@ const VerificationScreen = ({ counter, reset }) => (
   </Fragment>
 );
 
-VerificationScreen.propTypes = {};
+VerificationScreen.propTypes = {
+    counter: PropTypes.number.isRequired,
+    reset: PropTypes.func.isRequired,
+};
 
 export default VerificationScreen;

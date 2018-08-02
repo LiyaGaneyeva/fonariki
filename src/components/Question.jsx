@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import AnswerOptionContainer from '../containers/AnswerOptionContainer';
 
 const Question = ({ text, answers }) => (
@@ -9,5 +11,10 @@ const Question = ({ text, answers }) => (
     </ul>
   </div>
 );
+
+Question.propTypes = {
+  text: PropTypes.string.isRequired,
+  answers: PropTypes.arrayOf(PropTypes.shape()),
+};
 
 export default Question;

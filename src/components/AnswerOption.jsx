@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const AnswerOption = ({ text, value, handleSelectAnswerOption }) => (
   <li className="answerOption">
@@ -14,5 +15,11 @@ const AnswerOption = ({ text, value, handleSelectAnswerOption }) => (
     </label>
   </li>
 );
+
+AnswerOption.propTypes = {
+    text: PropTypes.string,
+    value: PropTypes.number,
+    handleSelectAnswerOption: PropTypes.func.isRequired,
+};
 
 export default AnswerOption;
