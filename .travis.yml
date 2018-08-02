@@ -3,9 +3,10 @@ sudo: false
 cache: yarn
 node_js: 9
 script: yarn build
-deploy: heroku
+deploy:
   provider: heroku
   app: light-flatstack
   api_key: $HEROKU_AUTH_TOKEN
+  keep-history: true
   on:
     branch: master

@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { injectGlobal } from 'styled-components';
 import AppContainer from './containers/AppContainer';
+import MarchMap from './components/MarchMap';
 import store from './store';
 import registerServiceWorker from './registerServiceWorker';
-import './index.css'
+import './index.css';
 
 ReactDOM.render(
   <Provider store={store}>
@@ -13,4 +14,7 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root'),
 );
+
+ReactDOM.render(<MarchMap />, document.getElementById('google-map'));
+
 registerServiceWorker();
