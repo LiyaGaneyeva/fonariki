@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #001019;
+    background-color: #020003;
     padding-top: 11px;
 }
 
@@ -32,9 +32,10 @@ a:focus {
 }
 
 .logo {
-    background-image: url('assets/logo.png');
-    width: 92px;
-    height: 64px;
+    background: url('assets/logo.jpg') no-repeat center;
+    background-size: contain;
+    width: 187px;
+    height: 106px;
 }
 
 .banner {
@@ -89,6 +90,11 @@ section {
 .sec-header {
     font-size: 48px;
     margin: 15px 0 35px;
+    text-align: center;
+}
+
+.sec-header2 {
+    font-size: 36px;
     text-align: center;
 }
 
@@ -155,4 +161,29 @@ section {
 
 .vk-link {
     background-image: url('assets/vk.png');
+}
+
+.address {
+    background-color: #2d2d2d;
+
+}
+
+.addresses {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1%;
+}
+
+.addresses h4 {
+    font-size: 24px;
+}
+
+.addresses ul {
+    padding: 0;
+    list-style: none;
+}
+
+.addresses ul li {
+    margin: 20px 0;
 }
