@@ -1,1 +1,1 @@
-export const QUESTION_TOTAL = 2;
+export const QUESTION_TOTAL = 15;
