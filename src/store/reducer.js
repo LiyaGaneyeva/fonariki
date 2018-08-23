@@ -27,6 +27,7 @@ export default function(state = initialState, action) {
         selectedAnswerOption: null,
       };
     case SELECT_ANSWER_OPTION:
+      console.log('selected');
       return { ...state, selectedAnswerOption: parseInt(action.payload.value, 10) };
     default:
       return state;

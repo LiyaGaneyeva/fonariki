@@ -12,9 +12,9 @@ class MarchMap extends Component {
 
     DirectionsService.route(
       {
-        origin: new google.maps.LatLng(41.85073, -87.65126),
-        destination: new google.maps.LatLng(41.85258, -87.65141),
-        travelMode: google.maps.TravelMode.DRIVING,
+        origin: new google.maps.LatLng(55.802691, 49.10769),
+        destination: new google.maps.LatLng(55.803742, 49.124706),
+        travelMode: google.maps.TravelMode.WALKING,
       },
       (result, status) => {
         if (status === google.maps.DirectionsStatus.OK) {
@@ -30,7 +30,7 @@ class MarchMap extends Component {
 
   render() {
     return (
-      <GoogleMap defaultZoom={14} defaultCenter={{ lat: 41.85073, lng: -87.65126 }}>
+      <GoogleMap defaultZoom={13} defaultCenter={{ lat: 55.802691, lng: -49.10769 }}>
         <DirectionsRenderer directions={this.state.directions} />
       </GoogleMap>
     );

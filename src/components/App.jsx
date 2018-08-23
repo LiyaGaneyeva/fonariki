@@ -10,6 +10,8 @@ const Wrapper = styled.div`
   height: 300px;
   background-color: #ffffff;
   color: #000000;
+  text-align: center;
+  position: relative;
 `;
 
 const App = ({ stage }) => (

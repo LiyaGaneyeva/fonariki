@@ -3,27 +3,34 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const WrapperListItem = styled.li`
-    list-style: none;
-    font-size: 18px;
-    margin: 10px 0;
+  list-style: none;
+  font-size: 18px;
+  margin: 10px 0;
 `;
 
 const RadioCustomLabel = styled.label`
-    padding-left: 5px;
+  padding-left: 5px;
 `;
 
-const AnswerOption = ({ text, value, handleSelectAnswerOption, checked }) => (
-    <select className="answerOptions"  name={this.props.name} onChange={this.changeValue} value={this.getValue()}>
-        {answers.map((answer, index) => <AnswerOptionContainer {...answer} key={index} />)}
-    </select>
+const AnswerOption = ({
+  text,
+  value,
+  group,
+  handleSelectAnswerOption,
+  setAnswerOption,
+  selected,
+}) => (
   <WrapperListItem>
     <input
       type="radio"
-      className="radioCustomButton"
-      name="radioGroup"
+      id={group + text + value}
+      name={group}
       value={value}
-      onChange={handleSelectAnswerOption}
-      checked={checked}
+      onChange={e => {
+        handleSelectAnswerOption(e);
+        setAnswerOption(e);
+      }}
+      checked={selected === group + text + value}
     />
     <RadioCustomLabel>{text}</RadioCustomLabel>
   </WrapperListItem>
