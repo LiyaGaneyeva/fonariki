@@ -13,6 +13,9 @@ const Message = styled.p`
   text-align: center;
   width: 70%;
   margin: 0 auto;
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 const ButtonWrapper = styled.div`

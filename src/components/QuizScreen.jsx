@@ -11,11 +11,18 @@ const Wrapper = styled.div`
   margin: 0px auto;
   width: 60%;
   text-align: left;
+  @media (max-width: 480px) {
+    width: calc(100% - 30px);
+    padding: 0 15px;
+  }
 `;
 
 const Quiz = styled.div`
   width: 80%;
   margin: 0 auto;
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 const ButtonWrapper = styled.div`

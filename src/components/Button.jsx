@@ -10,6 +10,7 @@ const Button = styled.button`
   background: linear-gradient(180deg, #ffc642 0%, #cf820f 100%);
   color: #ffffff;
   cursor: pointer;
+  outline: none;
 `;
 
 export default Button;
