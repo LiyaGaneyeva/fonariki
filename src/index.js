@@ -5,7 +5,6 @@ import AppContainer from './containers/AppContainer';
 import MarchMap from './components/MarchMap';
 import store from './store';
 import registerServiceWorker from './registerServiceWorker';
-import './index.css';
 
 ReactDOM.render(
   <Provider store={store}>

@@ -10,6 +10,7 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" href="%PUBLIC_URL%/index.css">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -22,6 +23,13 @@
     <title>Fonariki</title>
 </head>
 <body>
+<div id="preloader">
+    <div class="item-1"></div>
+    <div class="item-2"></div>
+    <div class="item-3"></div>
+    <div class="item-4"></div>
+    <div class="item-5"></div>
+</div>
 <header>
     <div class="container">
         <div class="logo"></div>
@@ -47,10 +55,10 @@
             лечение смеется, работает, занимается творчеством, путешествует. И помните – рак на начальных стадиях
             излечим практически всегда! Позаботьтесь о себе и своих близких. Проходите профилактические осмотры! Забота
             о собственном здоровье – это личная ответственность каждого современного человека.</p>
-  <!--      <div class="about-images">
-            <div class="about-image image1"></div>
-            <div class="about-image image2"></div>
-        </div>-->
+        <!--      <div class="about-images">
+                  <div class="about-image image1"></div>
+                  <div class="about-image image2"></div>
+              </div>-->
     </div>
 </section>
 <section>
@@ -139,15 +147,24 @@
         </div>
     </div>
 </section>
-<!--
-  This HTML file is a template.
-  If you open it directly in the browser, you will see an empty page.
+<script type="text/javascript">var preloader = document.getElementById("preloader");
 
-  You can add webfonts, meta tags, or analytics to this file.
-  The build step will place the bundled scripts into the <body> tag.
+function fadeOut(el) {
+    el.style.opacity = 1;
+    var interhellopreloader = setInterval(function () {
+        el.style.opacity = el.style.opacity - 0.05;
+        if (el.style.opacity <= 0.05) {
+            clearInterval(interhellopreloader);
+            preloader.style.display = "none";
+        }
+    }, 16);
+}
 
-  To begin the development, run `npm start` or `yarn start`.
-  To create a production bundle, use `npm run build` or `yarn build`.
--->
+window.onload = function () {
+    setTimeout(function () {
+        fadeOut(preloader);
+    }, 500);
+};
+</script>
 </body>
 </html>
